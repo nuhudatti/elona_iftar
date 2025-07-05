@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Elona 🌙</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta property="og:title" content="To Elona – A Ramadan Gift Wrapped in Light">
+<meta property="og:description" content="A heartfelt Iftar tribute to Elona. Designed with prayer, peace, and gratitude — a legacy in bloom.">
+<meta property="og:image" content="./IMGS/flower.jpg" />
+<meta property="og:url" content="https://github.com/nuhudatti/elona_iftar.git" />
+<meta name="twitter:card" content="summary_large_image" />
+    <style>
+        :root {
+            --gold: #D4AF37;
+            --rose: #FFD1DC;
+            --moonlight: #F8F3E6;
+            --midnight: #1A2639;
+            --arabic-blue: #0E4D7B;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--moonlight);
+            color: var(--midnight);
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-image: url('./IMGS/flower4.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        header {
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+        }
+        
+        .moon {
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle at 30% 30%, var(--moonlight) 0%, var(--gold) 70%);
+            border-radius: 50%;
+            margin: 0 auto;
+            box-shadow: 0 0 30px var(--gold);
+            position: relative;
+            animation: pulse 4s infinite alternate;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); box-shadow: 0 0 30px var(--gold); }
+            100% { transform: scale(1.05); box-shadow: 0 0 50px var(--gold); }
+        }
+        
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 4rem;
+            color: var(--gold);
+            margin: 1rem 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .subtitle {
+            font-family: 'Amiri', serif;
+            font-size: 1.5rem;
+            color: var(--arabic-blue);
+            margin-bottom: 2rem;
+        }
+        
+        .message-box {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 3rem;
+            margin: 2rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .message-box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/arabesque.png');
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        
+        .message-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.3rem;
+            line-height: 2.2rem;
+            text-align: center;
+            color: var(--midnight);
+            position: relative;
+        }
+        
+        .signature {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            text-align: right;
+            margin-top: 2rem;
+            color: var(--gold);
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 3rem 0;
+        }
+        
+        .gallery-item {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            height: 250px;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.7));
+            color: white;
+            padding: 1rem;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-caption {
+            opacity: 1;
+        }
+        
+        .dua-section {
+            background-color: var(--arabic-blue);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .dua-text {
+            font-family: 'Amiri', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .dua-translation {
+            font-style: italic;
+            opacity: 0.9;
+        }
+        
+        .countdown {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+        
+        .countdown-item {
+            background: white;
+            border-radius: 10px;
+            padding: 1rem;
+            min-width: 80px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .countdown-number {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--arabic-blue);
+        }
+        
+        .countdown-label {
+            font-size: 0.8rem;
+            color: var(--midnight);
+            opacity: 0.7;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            color: var(--midnight);
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2.5rem; }
+            .message-text { font-size: 1.1rem; }
+            .dua-text { font-size: 1.4rem; }
+        }
+        
+        /* Floating lantern animation */
+        .lantern {
+            position: fixed;
+            bottom: -100px;
+            animation: float 15s linear infinite;
+            opacity: 0.7;
+            z-index: -1;
+        }
+        
+        @keyframes float {
+            0% { transform: translateX(-10vw) translateY(0); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateX(110vw) translateY(-100vh); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating lanterns -->
+    <img src="https://i.postimg.cc/8kJZJQjV/github-create-repo.png" class="lantern" style="left: 10%; animation-delay: 0s; width: 80px;">
+    <img src="https://i.postimg.cc/8kJZJQjV/github-create-repo.png" class="lantern" style="left: 30%; animation-delay: 3s; width: 60px;">
+    <img src="https://i.postimg.cc/8kJZJQjV/github-create-repo.png" class="lantern" style="left: 70%; animation-delay: 7s; width: 100px;">
+    
+    <div class="container">
+        <header>
+            <div class="moon"></div>
+            <h1>For Elona</h1>
+            <div class="subtitle">Iftar Mubarak 🌙 Ramadan Kareem</div>
+        </header>
+        
+        <div class="message-box">
+            <div class="message-text">
+                <p>As the sun sets and the call to Maghrib echoes softly,</p>
+                <p>may every sip and every bite at your iftar bring you peace,</p>
+                <p>nourishment — and a quiet joy that lingers through the night.</p>
+                
+                <p style="margin-top: 2rem;">You've been a light in ways you may not even realize.</p>
+                <p>Your kindness, presence, and sincerity are seen... and cherished.</p>
+                
+                <p style="margin-top: 2rem;">This small page is just a whisper of appreciation —</p>
+                <p>a way of saying:</p>
+                <p>You matter.</p>
+                <p>You inspire.</p>
+                <p>And tonight, I pray your fast is accepted,</p>
+                <p>your heart uplifted,</p>
+                <p>and your dreams guided gently by the One who knows best.</p>
+            </div>
+            
+            <div class="signature">- Datti</div>
+        </div>
+        
+        <!-- Countdown to Maghrib -->
+        <div class="countdown">
+            <div class="countdown-item">
+                <div class="countdown-number" id="hours">00</div>
+                <div class="countdown-label">Hours</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="minutes">00</div>
+                <div class="countdown-label">Minutes</div>
+            </div>
+            <div class="countdown-item">
+                <div class="countdown-number" id="seconds">00</div>
+                <div class="countdown-label">Seconds</div>
+            </div>
+        </div>
+        
+        <!-- Dua Section -->
+        <div class="dua-section">
+            <div class="dua-text">اللَّهُمَّ إِنِّي أَسْأَلُكَ حُبَّكَ وَحُبَّ مَنْ يُحِبُّكَ</div>
+            <div class="dua-translation">"O Allah, I ask You for Your love and the love of those who love You"</div>
+        </div>
+        
+        <!-- Photo Gallery -->
+        <h2 style="text-align: center; font-family: 'Amiri', serif; color: var(--arabic-blue);">Moments of Light</h2>
+        <div class="gallery">
+            <div class="gallery-item" style="background-image: url('./IMGS/elona_with_kid.jpg');">
+                <div class="gallery-caption">The beauty of faith</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('./IMGS/build_to_last.jpg');">
+                <div class="gallery-caption">Sacred spaces</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('./IMGS/littlr_out_of_life.jpg');">
+                <div class="gallery-caption">Blessed meals</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('./IMGS/very_soon_you_will_smil.jpg');">
+                <div class="gallery-caption">Celestial beauty</div>
+            </div>
+             <div class="gallery-item" style="background-image: url('./IMGS/elona_driving2.jpg');">
+                <div class="gallery-caption">Celestial beauty</div>
+            </div>
+             <!-- <div class="gallery-item" style="background-image: url('./IMGS/elona_with_cap.jpg');">
+                <div class="gallery-caption">Celestial beauty</div>
+            </div>
+            <div class="gallery-item" style="background-image: url('./IMGS/vid.mp4');">
+                <div class="gallery-caption">Celestial beauty</div>
+            </div> -->
+            <div class="gallery-item" style="background-image: url('./IMGS/elona_class.jpg');">
+                <div class="gallery-caption">Celestial beauty</div>
+            </div>
+            
+        </div>
+        <div class="video-player-container" style="position: relative; max-width: 800px; margin: 20px auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.2);">
+    <!-- Video Element -->
+    <video id="mainVideo" width="100%" style="display: block;" poster="./IMGS/elona_snap.jpg">
+        <source src="./IMGS/vid.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+    </video>
+    
+    <!-- Custom Controls -->
+    <div class="video-controls" style="position: absolute; bottom: 0; left: 0; right: 0; background: linear-gradient(to top, rgba(0,0,0,0.7), transparent); padding: 15px 10px; display: flex; align-items: center; transition: opacity 0.3s;">
+        <!-- Play/Pause Button -->
+        <button id="playPauseBtn" style="background: none; border: none; color: white; font-size: 20px; margin-right: 10px; cursor: pointer; outline: none;">
+            ▶
+        </button>
+        
+        <!-- Progress Bar -->
+        <div style="flex-grow: 1; height: 5px; background: rgba(255,255,255,0.3); border-radius: 3px; margin-right: 10px; position: relative;">
+            <div id="progressBar" style="position: absolute; top: 0; left: 0; height: 100%; background: #ff5722; width: 0%; border-radius: 3px;"></div>
+        </div>
+        
+        <!-- Time Display -->
+        <span id="timeDisplay" style="color: white; font-family: Arial; font-size: 14px; margin-right: 10px;">
+            0:00 / 0:00
+        </span>
+        
+        <!-- Volume Control -->
+        <button id="muteBtn" style="background: none; border: none; color: white; font-size: 16px; margin-right: 5px; cursor: pointer; outline: none;">
+            🔈
+        </button>
+        <input id="volumeSlider" type="range" min="0" max="1" step="0.1" value="1" style="width: 70px;">
+        
+        <!-- Fullscreen Button -->
+        <button id="fullscreenBtn" style="background: none; border: none; color: white; font-size: 16px; margin-left: 10px; cursor: pointer; outline: none;">
+            ⛶
+        </button>
+    </div>
+    
+    <!-- Big Play Button (Center) -->
+    <button id="bigPlayBtn" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.7); color: white; border: none; border-radius: 50%; width: 60px; height: 60px; font-size: 24px; cursor: pointer; transition: all 0.3s;">
+        ▶
+    </button>
+    
+    <!-- Annotation -->
+    <div class="annotation" style="position: absolute; top: 10%; left: 70%; color: white; background: rgba(0,0,0,0.7); padding: 5px 10px; border-radius: 3px; font-family: Arial; font-size: 14px;">
+        Click to play
+    </div>
+</div>
+
+
+<style>
+    /* Smooth hover effects */
+    #playPauseBtn:hover, #bigPlayBtn:hover, #muteBtn:hover, #fullscreenBtn:hover {
+        transform: scale(1.1);
+        transition: transform 0.2s;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 600px) {
+        .video-player-container {
+            border-radius: 0;
+        }
+        #bigPlayBtn {
+            width: 50px;
+            height: 50px;
+            font-size: 20px;
+        }
+    }
+</style>
+        
+
+        
+        
+        <footer>
+            Made with ❤️ for Elona
+        </footer>
+    </div>
+    
+    <script>
+        // Countdown to Maghrib (example: 7:30 PM)
+        function updateCountdown() {
+            const now = new Date();
+            const maghrib = new Date();
+            
+            // Set Maghrib time (adjust as needed)
+            maghrib.setHours(19, 30, 0);
+            
+            const diff = maghrib - now;
+            
+            if (diff > 0) {
+                const hours = Math.floor(diff / (1000 * 60 * 60));
+                const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+                
+                document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+                document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+                document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+            } else {
+                document.getElementById('hours').textContent = '00';
+                document.getElementById('minutes').textContent = '00';
+                document.getElementById('seconds').textContent = '00';
+                document.querySelector('.countdown').innerHTML = '<div style="text-align: center; font-size: 1.5rem; color: var(--gold);">Iftar Mubarak! May your meal be blessed.</div>';
+            }
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Create floating lanterns dynamically
+        function createLantern() {
+            const lantern = document.createElement('img');
+            lantern.src = './IMGS/elona_with_kid.jpg';
+            lantern.className = 'lantern';
+            lantern.style.left = Math.random() * 100 + '%';
+            lantern.style.width = (Math.random() * 50 + 50) + 'px';
+            lantern.style.animationDuration = (Math.random() * 10 + 10) + 's';
+            lantern.style.animationDelay = (Math.random() * 5) + 's';
+            document.body.appendChild(lantern);
+            
+            // Remove lantern after animation completes
+            setTimeout(() => {
+                lantern.remove();
+            }, 15000);
+        }
+        
+        // Create lanterns periodically
+        setInterval(createLantern, 3000);
+        document.addEventListener('DOMContentLoaded', function() {
+    // Get elements
+    const video = document.getElementById('mainVideo');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const bigPlayBtn = document.getElementById('bigPlayBtn');
+    const progressBar = document.getElementById('progressBar');
+    const timeDisplay = document.getElementById('timeDisplay');
+    const muteBtn = document.getElementById('muteBtn');
+    const volumeSlider = document.getElementById('volumeSlider');
+    const fullscreenBtn = document.getElementById('fullscreenBtn');
+    const container = document.querySelector('.video-player-container');
+    
+    // Play/Pause functionality
+    function togglePlay() {
+        if (video.paused) {
+            video.play();
+            playPauseBtn.innerHTML = '❚❚';
+            bigPlayBtn.style.opacity = '0';
+            bigPlayBtn.style.pointerEvents = 'none';
+        } else {
+            video.pause();
+            playPauseBtn.innerHTML = '▶';
+            bigPlayBtn.style.opacity = '1';
+            bigPlayBtn.style.pointerEvents = 'auto';
+        }
+    }
+    
+    // Event listeners
+    video.addEventListener('click', togglePlay);
+    playPauseBtn.addEventListener('click', togglePlay);
+    bigPlayBtn.addEventListener('click', togglePlay);
+    
+    // Update progress bar
+    video.addEventListener('timeupdate', function() {
+        const progress = (video.currentTime / video.duration) * 100;
+        progressBar.style.width = progress + '%';
+        
+        // Update time display
+        const currentMinutes = Math.floor(video.currentTime / 60);
+        const currentSeconds = Math.floor(video.currentTime % 60).toString().padStart(2, '0');
+        const durationMinutes = Math.floor(video.duration / 60);
+        const durationSeconds = Math.floor(video.duration % 60).toString().padStart(2, '0');
+        
+        timeDisplay.textContent = `${currentMinutes}:${currentSeconds} / ${durationMinutes}:${durationSeconds}`;
+    });
+    
+    // Click on progress bar to seek
+    progressBar.parentElement.addEventListener('click', function(e) {
+        const percent = e.offsetX / this.offsetWidth;
+        video.currentTime = percent * video.duration;
+    });
+    
+    // Volume controls
+    muteBtn.addEventListener('click', function() {
+        video.muted = !video.muted;
+        muteBtn.innerHTML = video.muted ? '🔇' : '🔈';
+        volumeSlider.value = video.muted ? 0 : video.volume;
+    });
+    
+    volumeSlider.addEventListener('input', function() {
+        video.volume = this.value;
+        video.muted = (this.value == 0);
+        muteBtn.innerHTML = (this.value == 0) ? '🔇' : '🔈';
+    });
+    
+    // Fullscreen
+    fullscreenBtn.addEventListener('click', function() {
+        if (!document.fullscreenElement) {
+            container.requestFullscreen().catch(err => {
+                console.error(`Error attempting to enable fullscreen: ${err.message}`);
+            });
+        } else {
+            document.exitFullscreen();
+        }
+    });
+    
+    // Show/hide controls on mouse move
+    let controlsTimeout;
+    container.addEventListener('mousemove', function() {
+        document.querySelector('.video-controls').style.opacity = '1';
+        clearTimeout(controlsTimeout);
+        controlsTimeout = setTimeout(() => {
+            if (!video.paused) {
+                document.querySelector('.video-controls').style.opacity = '0';
+            }
+        }, 2000);
+    });
+    
+    // Initialize volume
+    video.volume = volumeSlider.value;
+});
+    </script>
+
+</body>
+</html>
